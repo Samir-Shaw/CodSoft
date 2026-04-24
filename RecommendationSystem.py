@@ -37,12 +37,10 @@ def build_similarity_matrix(df):
 def find_movie_index(df, name):
     name = name.strip().lower()
 
-    # exact match first
     exact = df[df["title"].str.lower() == name]
     if not exact.empty:
         return exact.index[0]
 
-    # partial match fallback
     partial = df[df["title"].str.lower().str.contains(name, na=False)]
     if not partial.empty:
         return partial.index[0]
