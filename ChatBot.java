@@ -21,7 +21,7 @@ public class ChatBot {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Chatbot started. Type something (type 'bye' to exit)");
-
+ 
         while (true) {
             System.out.print("You: ");
             String input = sc.nextLine().trim();
